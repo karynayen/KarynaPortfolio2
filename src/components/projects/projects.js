@@ -91,6 +91,17 @@ function Projects() {
             technologies: ['Roblox', 'Lua'],
             buttonLink: '',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
+        }, 
+        {
+            codeAvaliable: true,
+            name: 'Personal Website',
+            image: '',
+            github: '',
+            description:
+                'Built a Website from scratch using React.js and MUI. Hosted by react.',
+            technologies: ['React.js', 'MUI'],
+            buttonLink: '',
+            viewLink: '' // OPEN PROJECT DETAIL PAGE
         }
     ]
 
@@ -102,7 +113,7 @@ function Projects() {
                 <Box sx={{
                     width: '80%'
                 }}>
-                    <Typography variant="h3" component="div" sx={{ fontWeight: 'bold', fontFamily: 'Roboto' }}>
+                    <Typography variant="h3" component="div" sx={{ fontWeight: 'bold'}}>
                         Projects
                     </Typography>
                     <br></br>

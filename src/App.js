@@ -6,19 +6,20 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import MyToolbar from './components/toolbar/toolbar.js';
-import resume from './resume.pdf';
+//import resume from './resume.pdf';
 import Projects from './components/projects/projects.js';
 import Contact from './components/contact/contact.js';
 
 
+//https://www.reddit.com/r/reactjs/comments/q3cy21/how_can_i_get_an_image_to_open_in_a_new_tab/
+
 function App() {
   const backgroundColor = '#E6EFFE';
   const buttonColor = '#3979DB';
-  // {TODO: FIGURE OUT WHY THE DOWNLOADING IS NOT WORKING}
   const onDownload = () => {
     const link = document.createElement("a");
-    link.download = './download.pdf';
-    link.href = { resume };
+    link.download = 'download.pdf';
+    link.href = "resume.pdf";
     link.click();
   };
 
