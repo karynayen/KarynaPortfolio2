@@ -1,15 +1,11 @@
 import { Card, Stack } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box, Grid } from '@mui/material';
 import { CenteredBox } from '../../styles/app.styles.js';
 import { ProjectCard } from './projects.css.js';
-
-import GitHubIcon from '@mui/icons-material/GitHub';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 
 
@@ -91,6 +87,17 @@ function Projects() {
             technologies: ['Roblox', 'Lua'],
             buttonLink: '',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
+        }, 
+        {
+            codeAvaliable: true,
+            name: 'Personal Website',
+            image: '',
+            github: '',
+            description:
+                'Built a Website from scratch using React.js and MUI. Hosted by react.',
+            technologies: ['React.js', 'MUI'],
+            buttonLink: '',
+            viewLink: '' // OPEN PROJECT DETAIL PAGE
         }
     ]
 
@@ -102,7 +109,7 @@ function Projects() {
                 <Box sx={{
                     width: '80%'
                 }}>
-                    <Typography variant="h3" component="div" sx={{ fontWeight: 'bold', fontFamily: 'Roboto' }}>
+                    <Typography variant="h3" component="div" sx={{ fontWeight: 'bold'}}>
                         Projects
                     </Typography>
                     <br></br>

@@ -6,22 +6,29 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import MyToolbar from './components/toolbar/toolbar.js';
-import resume from './resume.pdf';
+//import resume from './resume.pdf';
 import Projects from './components/projects/projects.js';
 import Contact from './components/contact/contact.js';
+import { useRef } from 'react';
 
+//https://www.reddit.com/r/reactjs/comments/q3cy21/how_can_i_get_an_image_to_open_in_a_new_tab/
 
 function App() {
   const backgroundColor = '#E6EFFE';
   const buttonColor = '#3979DB';
-  // {TODO: FIGURE OUT WHY THE DOWNLOADING IS NOT WORKING}
-  const onDownload = () => {
-    const link = document.createElement("a");
-    link.download = './download.pdf';
-    link.href = { resume };
-    link.click();
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    console.log("HELLO")
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = 'download.pdf';
+    link.href = "resume.pdf";
+    link.click();
+  };
 
   return (
     <>
@@ -41,16 +48,16 @@ function App() {
           </IntroHeadingTypography>
           <Stack spacing={2} direction="row">
             {/* MAKE THIS BUTTON SCROLL TO AN ELEMENT*/}
-            <IntroOutlinedButton variant="outlined">Projects</IntroOutlinedButton>
+            <IntroOutlinedButton variant="outlined" onClick={handleClick}>Projects</IntroOutlinedButton>
             <IntroOutlinedButton onClick={onDownload} variant="outlined">
               Resume
             </IntroOutlinedButton>
-            <IntroOutlinedButton variant="outlined">Extra!</IntroOutlinedButton>
+            {/* <IntroOutlinedButton variant="outlined">Extra!</IntroOutlinedButton> */}
           </Stack>
 
           <IntroBodyTypography variant="body1">
             I am a second-year computer science major at Northeastern University,
-            interested in pursuing software developement.
+            interested in pursuing software development.
             <br></br>
             <br></br>
             My expertise is in utilizing object-oriented design to create
@@ -100,16 +107,20 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
-      {/* IMPROVE LOL */}
-      {/* ADD THIS BACK !!*/}
-      <Projects ></Projects>
-      
       <br></br>
       <br></br>
+      <div ref={ref}>
+        <Projects ></Projects>
+      </div>
+
       <br></br>
-      <Contact></Contact>
-     
-     
+
+      {/* <br></br>
+      <br></br>
+      <br></br>
+      <Contact></Contact> */}
+
+
     </>
   );
 }
