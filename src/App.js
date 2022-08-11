@@ -9,19 +9,34 @@ import MyToolbar from './components/toolbar/toolbar.js';
 //import resume from './resume.pdf';
 import Projects from './components/projects/projects.js';
 import Contact from './components/contact/contact.js';
-
+import { useRef } from 'react';
 
 //https://www.reddit.com/r/reactjs/comments/q3cy21/how_can_i_get_an_image_to_open_in_a_new_tab/
 
 function App() {
   const backgroundColor = '#E6EFFE';
   const buttonColor = '#3979DB';
-  const onDownload = () => {
-    const link = document.createElement("a");
-    link.download = 'download.pdf';
-    link.href = "resume.pdf";
-    link.click();
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    console.log("HELLO")
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // const onDownload = () => {
+  //   event => window.open('https://github.com/karynayen', "_blank")
+  //   const link = document.createElement("a");
+  //   link.download = 'download.pdf';
+  //   link.href = "resume.pdf";
+  //   link.click();
+  // };
+
+  const onDownload = (event) => {
+    window.open('https://s3.amazonaws.com/symp.csm.usprod/northeastern/files/163/1635ca449d067f13e93333d9d6ea0af6.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAID3RBESXBCESHUGA%2F20220811%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220811T004131Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=c5858561bc7497663560c60eb31cdab3c494499f892038e8a45d527a8d3a2afc',
+      "_blank")
+  };
+
+
 
 
   return (
@@ -42,16 +57,16 @@ function App() {
           </IntroHeadingTypography>
           <Stack spacing={2} direction="row">
             {/* MAKE THIS BUTTON SCROLL TO AN ELEMENT*/}
-            <IntroOutlinedButton variant="outlined">Projects</IntroOutlinedButton>
+            <IntroOutlinedButton variant="outlined" onClick={handleClick}>Projects</IntroOutlinedButton>
             <IntroOutlinedButton onClick={onDownload} variant="outlined">
               Resume
             </IntroOutlinedButton>
-            <IntroOutlinedButton variant="outlined">Extra!</IntroOutlinedButton>
+            {/* <IntroOutlinedButton variant="outlined">Extra!</IntroOutlinedButton> */}
           </Stack>
 
           <IntroBodyTypography variant="body1">
             I am a second-year computer science major at Northeastern University,
-            interested in pursuing software developement.
+            interested in pursuing software development.
             <br></br>
             <br></br>
             My expertise is in utilizing object-oriented design to create
@@ -101,16 +116,20 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
-      {/* IMPROVE LOL */}
-      {/* ADD THIS BACK !!*/}
-      <Projects ></Projects>
-      
       <br></br>
       <br></br>
+      <div ref={ref}>
+        <Projects ></Projects>
+      </div>
+
       <br></br>
-      <Contact></Contact>
-     
-     
+
+      {/* <br></br>
+      <br></br>
+      <br></br>
+      <Contact></Contact> */}
+
+
     </>
   );
 }
