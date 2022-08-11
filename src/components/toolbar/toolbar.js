@@ -18,8 +18,6 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
             }
             return current;
         });
-
-
     };
     return (
         <>
