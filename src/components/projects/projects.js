@@ -1,4 +1,4 @@
-import { Card, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
@@ -59,8 +59,8 @@ function Projects() {
             image: '',
             github: 'https://github.com/karynayen/ElevatorSimulation',
             description:
-                'GUI based application that models elevator functionality using a finite state machine to ' +
-                'determine the more efficient configuration ' +
+                'GUI based application that models elevator functionality using a finite state machine ' +
+                'with 7 states to determine the more efficient configuration ' +
                 'The elevator has capacity, vertical speed, door speed, and passenger flow configurations.',
             technologies: ['Java', 'JavaFX', 'Eclipse',],
             buttonLink: '', // REDIRECT TO A CONTACT ME PAGE,
@@ -94,7 +94,7 @@ function Projects() {
             image: '',
             github: '',
             description:
-                'Built a Website from scratch using React.js and MUI. Hosted by react.',
+                'Built a website from scratch using React.js and MUI. Hosted by Vercel.',
             technologies: ['React.js', 'MUI'],
             buttonLink: '',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
@@ -132,11 +132,11 @@ function Projects() {
                                     <CardActions sx={{paddingBottom:"20px"}}>
                                         <GitHubButton project={project}>{project.buttonMessage}</GitHubButton>
                                         {/* TODO: ABSTRACT COLORS */}
-                                        <Button variant="contained" size="small" sx={{ textTransform: 'none', backgroundColor: '#3979DB' }}>
+                                        {/* <Button variant="contained" size="small" sx={{ textTransform: 'none', backgroundColor: '#3979DB' }}>
                                             <Typography variant="body2">
                                                 View
                                             </Typography>
-                                        </Button>
+                                        </Button> */}
                                     </CardActions>
                                 </ProjectCard >
                             </Grid>
