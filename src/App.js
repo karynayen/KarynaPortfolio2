@@ -23,21 +23,12 @@ function App() {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // const onDownload = () => {
-  //   event => window.open('https://github.com/karynayen', "_blank")
-  //   const link = document.createElement("a");
-  //   link.download = 'download.pdf';
-  //   link.href = "resume.pdf";
-  //   link.click();
-  // };
-
-  const onDownload = (event) => {
-    window.open('https://s3.amazonaws.com/symp.csm.usprod/northeastern/files/163/1635ca449d067f13e93333d9d6ea0af6.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAID3RBESXBCESHUGA%2F20220811%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220811T004131Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=c5858561bc7497663560c60eb31cdab3c494499f892038e8a45d527a8d3a2afc',
-      "_blank")
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = 'download.pdf';
+    link.href = "resume.pdf";
+    link.click();
   };
-
-
-
 
   return (
     <>

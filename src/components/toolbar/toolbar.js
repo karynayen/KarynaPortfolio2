@@ -7,28 +7,25 @@ import Confetti from 'react-confetti'
 export default function MyToolbar({ backgroundColor, buttonColor }) {
     const colorHex = backgroundColor;
     const size = useWindowSize();
-    const [runConfetti, setRunConfetti] = useState(false);
-    const [confettiOpacity, setConfettiOpacity] = useState(1);
+    const [confettiOpacity, setConfettiOpacity] = useState(0);
 
     const toggleConfetti = () => {
-       
-        setRunConfetti(current => !current);
         setConfettiOpacity(current => 
             {if (current === 0) { 
                 current = 1;
             } else {
                 current = 0;
             }
+            return current;
         });
-        
-       
+
+
     };
     return (
         <>
             <Confetti
                 width={size.width}
                 height={size.height}
-                run={runConfetti}
                 opacity={confettiOpacity}
             />
             <Box>

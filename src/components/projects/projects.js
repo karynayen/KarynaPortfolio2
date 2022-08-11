@@ -1,15 +1,11 @@
 import { Card, Stack } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box, Grid } from '@mui/material';
 import { CenteredBox } from '../../styles/app.styles.js';
 import { ProjectCard } from './projects.css.js';
-
-import GitHubIcon from '@mui/icons-material/GitHub';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 
 
