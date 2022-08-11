@@ -7,13 +7,29 @@ import Confetti from 'react-confetti'
 export default function MyToolbar({ backgroundColor, buttonColor }) {
     const colorHex = backgroundColor;
     const size = useWindowSize();
-    let runConfetti = false; 
+    const [runConfetti, setRunConfetti] = useState(false);
+    const [confettiOpacity, setConfettiOpacity] = useState(1);
+
+    const toggleConfetti = () => {
+       
+        setRunConfetti(current => !current);
+        setConfettiOpacity(current => 
+            {if (current === 0) { 
+                current = 1;
+            } else {
+                current = 0;
+            }
+        });
+        
+       
+    };
     return (
         <>
             <Confetti
                 width={size.width}
                 height={size.height}
                 run={runConfetti}
+                opacity={confettiOpacity}
             />
             <Box>
                 <AppBar elevation={0} position="static">
@@ -30,7 +46,7 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
                             <ToolbarSmallButton buttonColor={buttonColor}>Skills</ ToolbarSmallButton>
                             <ToolbarSmallButton buttonColor={buttonColor}>Interests</ ToolbarSmallButton>
                             <ToolbarSmallButton buttonColor={buttonColor}>Resume</ ToolbarSmallButton> */}
-                            <ToolbarSmallButton buttonColor={buttonColor} >EXTRA!</ ToolbarSmallButton>
+                            <ToolbarSmallButton buttonColor={buttonColor} onClick={toggleConfetti} >EXTRA!</ ToolbarSmallButton>
                             {/* TODO: abstract button functionality and enable copying https://sophiali.dev/copy-email-address-on-click-react */}
                             <ToolbarSmallButton buttonColor={buttonColor} onClick={event => window.location.href = 'mailto:yen.k@northeastern.edu'} >
                                 Contact Me
@@ -50,24 +66,24 @@ function useWindowSize() {
     // Initialize state with undefined width/height so server and client renders match
     // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
     const [windowSize, setWindowSize] = useState({
-      width: undefined,
-      height: undefined,
+        width: undefined,
+        height: undefined,
     });
     useEffect(() => {
-      // Handler to call on window resize
-      function handleResize() {
-        // Set window width/height to state
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      }
-      // Add event listener
-      window.addEventListener("resize", handleResize);
-      // Call handler right away so state gets updated with initial window size
-      handleResize();
-      // Remove event listener on cleanup
-      return () => window.removeEventListener("resize", handleResize);
+        // Handler to call on window resize
+        function handleResize() {
+            // Set window width/height to state
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        }
+        // Add event listener
+        window.addEventListener("resize", handleResize);
+        // Call handler right away so state gets updated with initial window size
+        handleResize();
+        // Remove event listener on cleanup
+        return () => window.removeEventListener("resize", handleResize);
     }, []); // Empty array ensures that effect is only run on mount
     return windowSize;
-  }
+}
