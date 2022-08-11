@@ -1,15 +1,11 @@
-import { Card, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box, Grid } from '@mui/material';
 import { CenteredBox } from '../../styles/app.styles.js';
 import { ProjectCard } from './projects.css.js';
-
-import GitHubIcon from '@mui/icons-material/GitHub';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 
 
@@ -63,8 +59,8 @@ function Projects() {
             image: '',
             github: 'https://github.com/karynayen/ElevatorSimulation',
             description:
-                'GUI based application that models elevator functionality using a finite state machine to ' +
-                'determine the more efficient configuration ' +
+                'GUI based application that models elevator functionality using a finite state machine ' +
+                'with 7 states to determine the more efficient configuration ' +
                 'The elevator has capacity, vertical speed, door speed, and passenger flow configurations.',
             technologies: ['Java', 'JavaFX', 'Eclipse',],
             buttonLink: '', // REDIRECT TO A CONTACT ME PAGE,
@@ -91,6 +87,17 @@ function Projects() {
             technologies: ['Roblox', 'Lua'],
             buttonLink: '',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
+        }, 
+        {
+            codeAvaliable: true,
+            name: 'Personal Website',
+            image: '',
+            github: '',
+            description:
+                'Built a website from scratch using React.js and MUI. Hosted by Vercel.',
+            technologies: ['React.js', 'MUI'],
+            buttonLink: '',
+            viewLink: '' // OPEN PROJECT DETAIL PAGE
         }
     ]
 
@@ -102,7 +109,7 @@ function Projects() {
                 <Box sx={{
                     width: '80%'
                 }}>
-                    <Typography variant="h3" component="div" sx={{ fontWeight: 'bold', fontFamily: 'Roboto' }}>
+                    <Typography variant="h3" component="div" sx={{ fontWeight: 'bold'}}>
                         Projects
                     </Typography>
                     <br></br>
@@ -125,11 +132,11 @@ function Projects() {
                                     <CardActions sx={{paddingBottom:"20px"}}>
                                         <GitHubButton project={project}>{project.buttonMessage}</GitHubButton>
                                         {/* TODO: ABSTRACT COLORS */}
-                                        <Button variant="contained" size="small" sx={{ textTransform: 'none', backgroundColor: '#3979DB' }}>
+                                        {/* <Button variant="contained" size="small" sx={{ textTransform: 'none', backgroundColor: '#3979DB' }}>
                                             <Typography variant="body2">
                                                 View
                                             </Typography>
-                                        </Button>
+                                        </Button> */}
                                     </CardActions>
                                 </ProjectCard >
                             </Grid>
