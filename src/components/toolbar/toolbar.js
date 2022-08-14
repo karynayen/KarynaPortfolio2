@@ -10,8 +10,8 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
     const [confettiOpacity, setConfettiOpacity] = useState(0);
 
     const toggleConfetti = () => {
-        setConfettiOpacity(current => 
-            {if (current === 0) { 
+        setConfettiOpacity(current => {
+            if (current === 0) {
                 current = 1;
             } else {
                 current = 0;
@@ -42,6 +42,9 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
                             <ToolbarSmallButton buttonColor={buttonColor}>Interests</ ToolbarSmallButton>
                             <ToolbarSmallButton buttonColor={buttonColor}>Resume</ ToolbarSmallButton> */}
                             <ToolbarSmallButton buttonColor={buttonColor} onClick={toggleConfetti} >EXTRA!</ ToolbarSmallButton>
+                            <ToolbarSmallButton buttonColor={buttonColor} onClick={event => window.open('https://medium.com/@karyna.yen', "_blank")}>
+                                Blog
+                            </ ToolbarSmallButton>
                             {/* TODO: abstract button functionality and enable copying https://sophiali.dev/copy-email-address-on-click-react */}
                             <ToolbarSmallButton buttonColor={buttonColor} onClick={event => window.location.href = 'mailto:yen.k@northeastern.edu'} >
                                 Contact Me
