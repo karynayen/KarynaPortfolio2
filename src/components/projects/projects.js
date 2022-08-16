@@ -96,7 +96,7 @@ function Projects() {
             description:
                 'Built a website from scratch using React.js and MUI. Hosted by Vercel.',
             technologies: ['React.js', 'MUI'],
-            buttonLink: '',
+            buttonLink: 'https://github.com/karynayen/KarynaPortfolio2',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
         }
     ]
