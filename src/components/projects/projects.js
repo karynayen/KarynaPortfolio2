@@ -165,7 +165,7 @@ function GitHubButton({ project }) {
     } else {
         return (
             <>
-                <Button variant="outlined" size="small" sx={{ textTransform: 'none', borderColor: '#3979DB', color: '#3979DB' }}>
+                <Button disabled variant="outlined" size="small" sx={{ textTransform: 'none', borderColor: '#3979DB', color: '#3979DB' }}>
                     {/* onClick={() => window.open(project.buttonLink, "_blank")} */}
                     <Typography variant="body2">
                         Code Avaliable on Request
