@@ -41,7 +41,7 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
                             <ToolbarSmallButton buttonColor={buttonColor}>Skills</ ToolbarSmallButton>
                             <ToolbarSmallButton buttonColor={buttonColor}>Interests</ ToolbarSmallButton>
                             <ToolbarSmallButton buttonColor={buttonColor}>Resume</ ToolbarSmallButton> */}
-                            <ToolbarSmallButton buttonColor={buttonColor} onClick={toggleConfetti} >EXTRA!</ ToolbarSmallButton>
+                            <ToolbarSmallButton buttonColor={buttonColor} onClick={toggleConfetti} >Celebrate! 🎉</ ToolbarSmallButton>
                             <ToolbarSmallButton buttonColor={buttonColor} onClick={event => window.open('https://medium.com/@karyna.yen', "_blank")}>
                                 Blog
                             </ ToolbarSmallButton>
