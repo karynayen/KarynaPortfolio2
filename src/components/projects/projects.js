@@ -92,7 +92,7 @@ function Projects() {
             codeAvaliable: true,
             name: 'Personal Website',
             image: '',
-            github: '',
+            github: 'https://github.com/karynayen/KarynaPortfolio2',
             description:
                 'Built a website from scratch using React.js and MUI. Hosted by Vercel.',
             technologies: ['React.js', 'MUI'],
