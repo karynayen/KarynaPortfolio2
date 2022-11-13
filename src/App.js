@@ -63,7 +63,7 @@ function App() {
             My expertise is in utilizing object-oriented design to create
             various Java applications.
             I'm also experienced in using Javascript, Typescript, HTML/CSS, and Python,
-            along with working with the React.js and Bootstrap librarys, and using Git for version control.
+            along with working with the React.js and Bootstrap libraries, and using Git for version control.
             <br></br>
             <br></br>
             Outside of software development, I am a competitive swimmer and a triathlete.
