@@ -56,7 +56,7 @@ function App() {
           </Stack>
 
           <IntroBodyTypography variant="body1">
-            I am a third-year computer science major at Northeastern University,
+            I am a computer science major at Northeastern University,
             interested in pursuing software development.
             <br></br>
             <br></br>

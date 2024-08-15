@@ -17,6 +17,28 @@ import { ProjectCard } from './projects.css.js';
 function Projects() {
     const projects = [
         {
+            codeAvaliable: true,
+            name: 'RCG Slack Bot',
+            image: '',
+            github: 'https://github.com/karynayen/RCG-Bot',
+            description:
+                'I built an RCG Slack bot to make it a little easier to organize RCG events. RCGs (Regional Connection Gatherings) are self-organized social gatherings funded by Atlassian. This project helps organizers collect the email addresses of RCG participants to input into the RCG form and easily create a Slack channel with all the participants.',
+            technologies: ['Slack Bolt', 'MongoDB', 'Mongoose', 'Slack API'],
+            buttonLink: '',  // REDIRECT TO A CONTACT ME PAGE
+            viewLink: '' // OPEN PROJECT DETAIL PAGE
+        },
+        {
+            codeAvaliable: false,
+            name: 'Couplet Dating App',
+            image: '',
+            github: '',
+            description:
+                'Collaborated with a team of 10 to build out a dating app aligned to stakeholder requests. Designed product schemas and databases. Built out endpoints and responsive React Native Components',
+            technologies: ['Go', 'Gorm','React Native', 'Open API'],
+            buttonLink: '',  // REDIRECT TO A CONTACT ME PAGE
+            viewLink: '' // OPEN PROJECT DETAIL PAGE
+        },
+        {
             codeAvaliable: false,
             name: 'Image Processor',
             image: '',
