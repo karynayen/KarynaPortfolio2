@@ -23,7 +23,7 @@ function Projects() {
             github: 'https://github.com/karynayen/RCG-Bot',
             description:
                 'I built an RCG Slack bot to make it a little easier to organize RCG events. RCGs (Regional Connection Gatherings) are self-organized social gatherings funded by Atlassian. This project helps organizers collect the email addresses of RCG participants to input into the RCG form and easily create a Slack channel with all the participants.',
-            technologies: ['Slack Bolt', 'MongoDB', 'Mongoose', 'Slack API'],
+            technologies: ['SlackBolt', 'MongoDB', 'Mongoose'],
             buttonLink: '',  // REDIRECT TO A CONTACT ME PAGE
             viewLink: '' // OPEN PROJECT DETAIL PAGE
         },
@@ -65,7 +65,7 @@ function Projects() {
         },
         {
             codeAvaliable: true,
-            name: 'Email Sender Tool (HBP)',
+            name: 'Email Sender',
             image: '',
             github: 'https://github.com/HackBeanpot/internal-tools',
             description:
